@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start widgets</title>
+  <script src="./menu.js"></script>
+  <style>
+    body {
+      background-color: gainsboro;
+      margin: 0px;
+      font-family: monospace;
+      font-size: 1.2em;
+    }
+
+    button {
+      padding: 5px 30px;
+      border: 1px #fefefe outset;
+      background-color: gainsboro;
+    }
+
+    button:hover {
+      background-color: #f0f0f0;
+    }
+
+    button:active {
+      border-style: inset;
+    }
+
+    input[type="number"] {
+      padding: 5px;
+      border: 1px #fefefe inset;
+      background-color: LightGoldenRodYellow;
+    }
+
+    input[type="number"]:focus {
+      outline: none;
+    }
+
+    .area {
+      margin-top: 1em;
+      user-select: none;
+      position: relative;
+
+      .areaName {
+        position: absolute;
+        margin: 0;
+        padding: 0px 0.5em;
+        background-color: gainsboro;
+        /* transform: translateX(0.5em) translateY(-0.5em) */
+        top: -0.5em;
+        left: 0.5em;
+      }
+
+      .areaContent {
+        border: 3px #fefefe groove;
+        padding: 5px;
+        padding-top: 1em
+      }
+    }
+
+    #app {
+      display: flex;
+      align-items: stretch;
+      height: 100vh;
+
+      >div {
+        flex: 1;
+        padding: 10px;
+      }
+
+      #widgetsList {
+        flex-basis: 0%;
+        overflow-y: visible;
+        border-right: 3px #fefefe groove;
+
+        li {
+          padding: 5px;
+          border: 1px #fefefe outset;
+
+          user-select: none;
+        }
+
+        li::marker {
+          content: '';
+        }
+
+        li+li {
+          margin-top: 10px;
+        }
+
+        li:hover {
+          background-color: #f0f0f0;
+        }
+
+        li:active {
+          border-style: inset;
+        }
+      }
+
+      #settingPanel {
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: 0%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div id="widgetsList">
+      <!-- <ls>
+        <li>AAAAAA</li>
+        <li>BBBB</li>
+        <li>ABABA</li>
+        <li>AAAAAA</li>
+        <li>AAAAAA</li>
+        <li>BBBB</li>
+        <li>ABABA</li>
+        <li>AAAAAA</li>
+        <li>AAAAAA</li>
+      </ls> -->
+    </div>
+    <div id="settingPanel">
+      <!-- <h1>timer</h1>
+      <button id="toggleWidget">啟動</button>
+      <h2>基礎設定</h2>
+      <div class="area">
+        <span class="areaName">位置</span>
+        <div class="areaContent">
+          <label>x：
+            <input style="width: 50px;" type="number">
+          </label>
+          <label>y：
+            <input style="width: 50px;" type="number">
+          </label>
+        </div>
+      </div>
+      <div class="area">
+        <span class="areaName">選項</span>
+        <div class="areaContent">
+          <input type="checkbox" id="keepTop">
+          <label for="keepTop">視窗至頂</label>
+          <input type="checkbox" id="ignoreMouse">
+          <label for="ignoreMouse">點擊穿透</label>
+        </div>
+      </div>
+      <h2>進階設定</h2>
+    </div> -->
+  </div>
+</body>
+
+</html>

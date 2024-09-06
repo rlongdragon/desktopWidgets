@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>計時器</title>
+  <style>
+    body {
+      --bgColor: #fff5eb;
+      --fontColor: #272727;
+      --mainColor: #B2CAF6;
+      --mainColorHover: #d1e0fa;
+      --secColor: #5D80C0;
+
+      background-color: var(--bgColor);
+      color: var(--fontColor);
+    }
+
+    button {
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 1.2em;
+      background-color: var(--mainColor);
+      border: 5px --secColor solid;
+      border-radius: 1000px;
+    }
+
+    button:hover {
+     background-color: var(--mainColorHover);
+    }
+  </style>
+</head>
+
+<body style="margin: 16px;">
+  <h1>七段顯示器計時器</h1>
+  <div>
+    <button id="timer">開啟計時器</button>
+  </div>
+  <h3>設定計時器</h3>
+  <div>
+    <div>
+      <button>外觀</button>
+      <div></div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>計時器</title>
+  <style>
+    body {
+      width: auto;
+      display: inline-block;
+      color: rgb(115, 255, 122);
+      text-shadow: 0 0 0.8em rgb(91, 235, 99), 0 0 0.2em rgb(169, 231, 172);
+      /* text-shadow: 0 0 1.2em rgb(5, 12, 5), 0 0 0.4em rgb(13, 19, 14), 0 0 0.8em rgb(91, 235, 99), 0 0 0.2em rgb(169, 231, 172); */
+      /*  */
+      overflow: hidden;
+      /* 禁止框選 */
+      -webkit-user-select: none;
+      user-select: none;
+      --scale: 0.6;
+      scale: var(--scale);
+      transform-origin: left top;
+    }
+
+    h1 {
+      font-size: 8em;
+    }
+
+    #timer {
+      font-family: "7-Segment";
+      margin: 0;
+    }
+
+    .action-element {
+      font-size: 2.5em;
+      font-family: "consolas", monospace;
+      font-weight: 900;
+      margin-left: 0.5em;
+      cursor: pointer;
+    }
+
+    #modeShow{
+      font-size: 2.5em;
+      font-family: "consolas", monospace;
+      font-weight: 900;
+    }
+
+    .draggable {
+      cursor: move;
+    }
+  </style>
+</head>
+
+<body style="margin: 16px;">
+  <span class="action-element draggable">MOVE</span>
+  <span class="action-element" id="scale">SCALE</span>
+  <span class="action-element" id="mode">MODE</span><span id="modeShow">:CLOCK</span>
+  <h1 id="timer"><span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>.<span id="millisecond">000</span></h1>
+  <div id="stopwatch" style="display: none;">
+    <span class="action-element" id="stopwatch-start">START</span>
+    <span class="action-element" id="stopwatch-stop">STOP</span>
+    <span class="action-element" id="stopwatch-reset">RESET</span>
+  </div>
+  <div id="countdown" style="display: none;">
+    <span class="action-element" id="countdown-start">START</span>
+    <span class="action-element" id="countdown-stop">STOP</span>
+    <span class="action-element" id="countdown-reset">RESET</span>
+  <script src="timer.js"></script>
+</body>
+
+</html>
